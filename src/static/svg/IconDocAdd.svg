@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="IconDocAdd" clip-path="url(#clip0_1056_28631)">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M13.5606 4.35355C13.8419 4.63485 14 5.01638 14 5.41421V5.99075L14 6V14C14 14.5523 13.5523 15 13 15H3C2.44772 15 2 14.5523 2 14V0.999995C2 0.447711 2.44772 -4.55571e-06 3 -4.55571e-06L8.58576 -1.52588e-05C8.98359 -1.52588e-05 9.36512 0.158022 9.64642 0.439328L13.5606 4.35355ZM9.5 5H12.7929L9 1.20712V4.5C9 4.77614 9.22386 5 9.5 5ZM9 13V11H7V10H9V8H10V10H12V11H10V13H9Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1056_28631">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

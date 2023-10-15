@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inter", sans-serif;
+}
+
+.text-secondary {
+  color: #fbf6eb;
+}
+
+.color-default {
+  color: #faf8f6;
+}
+
+.text-brand {
+  color: #334746;
+}
+
+.text-primary {
+  color: #2b361e;
+}
+
+.text-medium {
+  font-size: 24px;
+}
+
+.card-gradient {
+  background: var(
+    --effect-gradient-dark,
+    linear-gradient(
+      47deg,
+      rgba(43, 54, 30, 0.2) 12.88%,
+      rgba(239, 201, 76, 0.2) 83.36%
+    ),
+    #2b361e
+  );
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 8px; /* height of horizontal scrollbar ← You're missing this */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 66, 105, 0.05);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(76, 76, 64, 0.26);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.category-tag {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 66, 105, 0.28);
+}
+.event-tag {
+  border-radius: 4px;
+  border: 1px solid var(--control-default-bg-border, rgba(0, 66, 105, 0.28));
+  background: linear-gradient(
+    90deg,
+    rgba(251, 237, 150, 0.5) 0%,
+    rgba(171, 236, 214, 0.5) 100%
+  );
+}
+
+.grid-full {
+  grid-column: 1/-1;
+}
+
+.reg-tag {
+  background: linear-gradient(90deg, #fbed96 0%, #abecd6 100%);
+}
+
+.event-grad {
+  background: var(
+    --effect-gradient-light,
+    linear-gradient(
+      90deg,
+      rgba(251, 237, 150, 0.5) 0%,
+      rgba(171, 236, 214, 0.5) 100%
+    )
+  );
+}
+
+.input-border {
+  border-color: rgba(51, 71, 70, 0.28);
+}
+
+.date-input {
+  color: rgba(76, 76, 64, 0.5);
+}
+
+.smooth-animation {
+  animation: smooth 0.4s forwards ease-in-out;
+  opacity: 0;
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.grid-left {
+  grid-column: 2/3;
+}
+
+.grid-test {
+  grid-auto-rows: minmax(30px, 100%);
+}
+
+.profile-border {
+  border-radius: 4px;
+  border: 1px solid #4c4c40;
+}
+
+.tag-style {
+  border-radius: 4px;
+  border: 1px solid var(--control-default-bg-border, rgba(0, 66, 105, 0.28));
+  background: var(
+    --effect-gradient-light,
+    linear-gradient(
+      90deg,
+      rgba(251, 237, 150, 0.5) 0%,
+      rgba(171, 236, 214, 0.5) 100%
+    )
+  );
+}
+
+body {
+  background: #faf8f6;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+select {
+  border-right: 12px solid transparent;
+}
