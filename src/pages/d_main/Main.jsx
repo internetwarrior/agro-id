@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React from "react";
 import Banner from "./components/Banner";
 import Button from "../a_components/Button";
 import Card from "./components/Card";
@@ -20,7 +19,6 @@ import scss from './components/Main.module.scss'
 import Chart_1 from "./charts/Chart";
 import Horizontal_chart from "./charts/Horizontal";
 import PieChart1 from "./charts/PieChart";
-
 import { Outlet } from "react-router-dom";
 
 function Main() {

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../../static/draft/dummyImage.jpg";
 import UserIMG from "../../../static/draft/user.png";
 import JobSVG from "../../../static/svg/job.svg";
 import FromSVG from "../../../static/svg/from.svg";

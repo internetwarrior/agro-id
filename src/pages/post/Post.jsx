@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Title from "../a_components/Title";
 import titleSVG from "../../static/svg/IconBook.svg";
 import PostContent from "../a_components/PostContent";
@@ -9,10 +9,7 @@ import GoForwSVG from "../../static/svg/IconForward.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
-import scss from "./Post.module.scss";
-import styled from "styled-components";
-import SelectApp from "../d_main/components/Select";
-import { Input } from "./Input";
+import { InputSearch } from "../a_components/Input";
 
 
 function Post() {
@@ -51,7 +48,7 @@ function Post() {
           <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
             Все публикации
           </div>
-       <Input placeholder={'Поиск по публикациям'}/>
+       <InputSearch placeholder={'Поиск по публикациям'}/>
        
     
         </div>
@@ -105,8 +102,3 @@ function Post() {
 
 export default Post;
 
-const DropDownContainer = styled("div")``;
-const DropDownHeader = styled("div")``;
-const DropDownListContainer = styled("div")``;
-const DropDownList = styled("ul")``;
-const ListItem = styled("li")``;

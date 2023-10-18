@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import scss from "../../post/Post.module.scss";
 
