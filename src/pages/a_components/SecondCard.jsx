@@ -11,7 +11,7 @@ function SecondCard() {
       <div className=" relative h-full max-h-[174px] rounded-[8px] overflow-hidden">
         <img src={Image} className=" w-full h-full object-cover" alt="" />
         <div className=" absolute top-0 left-0 w-full flex justify-between p-[16px]">
-          <div className="p-[4px] rounded-[8px] text-[#4C4C40]] text-[12px] gap-[4px] flex items-center">
+          <div className="p-[4px] bg-slate-200	 rounded-[8px] text-[#4C4C40]] text-[12px] gap-[4px] flex items-center">
             <img src={Time_mini} className="" alt="" />
             еще 6 дней
           </div>
@@ -29,7 +29,7 @@ function SecondCard() {
       <h4 className=" font-semibold text-[#2B361E] text-base">
         «Небесная Цивилизация» — лекция Дмитрия Пескова #Архипелаг2023
       </h4>
-      <div className="flex">
+      <div className="flex ">
         <div className="flex items-center flex-grow text-[12px] text-[#4C4C40]">
           <img src={TimeIcon} alt="" className="pr-[8px]" />
           <div>8-августа</div>

@@ -9,8 +9,10 @@ function PostContent(props) {
       <div className=" text-[20px]  text-[#2B361E] opacity-80 max-w-[900px]">
         {props.content}
       </div>
-      {/* <Button title={props.buttonTitle} /> */}
-      <Link to={"create-edit/event"}>Создать мероприятие</Link>
+      <Link to={"create-edit/event"}>  <Button
+          title={"Создать мероприятие"}
+      
+        ></Button></Link>
       <div className="w-full h-full absolute top-0 left-0 -z-10">
         <img
           className=" w-full h-full object-cover "

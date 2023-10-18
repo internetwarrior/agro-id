@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Banner from "./components/Banner";
 import Button from "../a_components/Button";
@@ -11,7 +11,12 @@ import PublicCard from "../post/components/PublicCard";
 import IntegrationCard from "./components/IntegrationCard";
 import IntegImage from "../../static/draft/Integration.png";
 import SecondBanner from "./components/SecondBanner";
-
+import img2 from '../../static/svg/Vector (4).svg'
+import img3 from '../../static/svg/crown.svg'
+import img4 from '../../static/svg/leave.svg'
+import img5 from '../../static/svg/IconBook.svg'
+import img6 from '../../static/svg/flag.svg'
+import scss from './components/Main.module.scss'
 import Chart_1 from "./charts/Chart";
 import Horizontal_chart from "./charts/Horizontal";
 import PieChart1 from "./charts/PieChart";
@@ -19,13 +24,17 @@ import PieChart1 from "./charts/PieChart";
 import { Outlet } from "react-router-dom";
 
 function Main() {
+
+
   return (
     <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
       <div className="  w-full  mb-[200px] flex items-center flex-col ">
         <Outlet />
-        <div className=" grid grid-cols-1  xl:grid-cols-2 gap-6 mt-[28px] px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px] w-full">
+        <div className=" grid grid-cols-1   gap-6 mt-[28px] px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px] w-full">
           <Banner />
-          <SecondBanner />
+
+          <SecondBanner className={
+            scss.secondBanner} />
         </div>
         <div className=" w-full flex gap-[24px]  my-[24px] overflow-x-scroll px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px]">
           <Card />
@@ -136,7 +145,7 @@ function Main() {
         </div>
         <div className=" max-w-[1600px] w-full">
           <div className="pl-[20px] md:px-[40px] 2xl:px-[0px] max-w-[1600px]">
-            <Title img={SVG1} title="На этой неделе в Вашем городе" />
+            <Title img={img2} title="На этой неделе в Вашем городе" />
             <div className="flex overflow-x-scroll xl:overflow-visible xl:grid grid-cols-4 gap-6 pt-[24px]  ">
               <SecondCard />
               <SecondCard />
@@ -160,9 +169,9 @@ function Main() {
         </div>
         <div className=" max-w-[1600px] w-full">
           <div className="pl-[24px] px-[20px] md:px-[40px] 2xl:px-[0px]">
-            <Title img={SVG1} title="Важные мероприятия" />
+            <Title img={img3} title="Важные мероприятия" />
             <div className="flex overflow-x-scroll xl:overflow-visible xl:grid grid-cols-4 gap-6  ">
-              <SecondCard />
+              <SecondCard  />
               <SecondCard />
               <SecondCard />
               <SecondCard />
@@ -174,7 +183,7 @@ function Main() {
           </div>
         </div>
         <div className="  px-[20px] md:px-[40px] 2xl:px-[0px] max-w-[1600px]">
-          <Title img={SVG1} title="Подборки событий" />
+          <Title img={img4} title="Подборки событий" />
           <div className="grid grid-cols-1  md:grid-cols-6 gap-6 pt-[24px]">
             <EventCard cla small={true} />
             <EventCard small={true} />
@@ -188,7 +197,7 @@ function Main() {
           <div className=" pl-[20px] md:px-[40px] 2xl:px-[0px]">
             <Title
               link="post"
-              img={SVG1}
+              img={img5}
               linkInclude={true}
               title="Публикации"
             />
@@ -202,7 +211,7 @@ function Main() {
         </div>
 
         <div className=" px-[20px] md:px-[40px] 2xl:px-[0px] max-w-[1600px]">
-          <Title img={SVG1} title="Интеграции" />
+          <Title img={img6} title="Интеграции" />
           <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 sm:grid-cols-2 gap-6 pt-[24px] justify-center ">
             <IntegrationCard img={IntegImage} />
             <IntegrationCard img={IntegImage} />

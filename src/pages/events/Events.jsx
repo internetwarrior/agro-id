@@ -9,7 +9,13 @@ import GoBackSVG from "../../static/svg/IconBackward.svg";
 import GoForwSVG from "../../static/svg/IconForward.svg";
 
 import SecondCard from "../a_components/SecondCard";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import world from "../../static/svg/IconWorldFilled.svg";
+import sunIcon from "../../static/svg/sunIcon.svg";
+import search from "../../static/svg/search.svg";
+
+import scss from "../post/Post.module.scss";
+import SelectApp from "../d_main/components/Select";
 
 function Events() {
   return (
@@ -23,9 +29,40 @@ function Events() {
           buttonTitle={"Создать Мероприятие"}
           img={Post_bg}
         />
-        <div className=" text-[#2B361E] text-[24px] w-full font-bold">
-          Все Мероприятия
+      
+        <div className="flex   gap-3 	border-b-4  w-full 	">
+          <div className="flex gap-1  	">
+            <img src={world} alt="" />
+            <NavLink className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-b-black">
+              Все
+            </NavLink>
+          </div>
+          <div className="flex gap-1">
+            <img src={sunIcon} alt="" />
+            <NavLink className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
+              {" "}
+              Мои публикации
+            </NavLink>{" "}
+          </div>
         </div>
+
+        <div className="flex justify-between w-full ">
+          <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
+          Все Мероприятия
+          </div>
+          <div className={scss.inputContainer}>
+            <img src={search} alt="" />
+            <input
+              className={scss.input}
+              type="text"
+              placeholder="Поиск по публикациям"
+              name=""
+              id=""
+            />
+          </div>
+        </div>
+
+<SelectApp/>
 
         <div className="grid grid-cols-4 gap-[24px]">
           <SecondCard />

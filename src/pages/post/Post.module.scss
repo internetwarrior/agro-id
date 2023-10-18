@@ -1,0 +1,47 @@
+.inputContainer {
+ width: 100%;
+padding: 13px ;
+display: flex;
+border: 1px solid rgb(181, 179, 179);
+align-items: center;
+border-radius: 4px;
+gap: 20px;
+
+
+}
+
+.input {
+border: none;
+outline: none;
+}
+.customSelect {
+ display: flex;
+ border-radius: 4px;
+gap: 20px;
+justify-content: start;
+width: 100%;
+
+
+}
+.select{
+ border: none;
+ outline: black;
+ margin-left: 0;
+
+}
+.select:hover{
+ background: linear-gradient(
+    90deg,
+    rgba(251, 237, 150, 0.5) 0%,
+    rgba(171, 236, 214, 0.5) 100%
+  );
+
+
+}
+.form{
+}
+
+
+
+
+

@@ -1,29 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../a_components/Title";
-import titleSVG from "../../static/svg/IconLineAndBarChart.svg";
+import titleSVG from "../../static/svg/IconBook.svg";
 import PostContent from "../a_components/PostContent";
 import Post_bg from "../../static/images/post_bg.png";
 import PublicCard from "./components/PublicCard";
 import GoBackSVG from "../../static/svg/IconBackward.svg";
 import GoForwSVG from "../../static/svg/IconForward.svg";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import world from "../../static/svg/IconWorldFilled.svg";
+import sunIcon from "../../static/svg/sunIcon.svg";
+import scss from "./Post.module.scss";
+import styled from "styled-components";
+import SelectApp from "../d_main/components/Select";
+import { Input } from "./Input";
+
 
 function Post() {
+
+
   return (
     <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
       <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
         <Outlet />
         <Title img={titleSVG} title="Публикации" />
+
         <PostContent
           title={"Публикации"}
           content="Вы можете разместить свою статью, публикацию или исследование по одной из тематик отрасли."
           buttonTitle={"Создать публикацию"}
           img={Post_bg}
         />
-        <div className=" text-[#2B361E] text-[24px] w-full font-bold">
-          Все публикации
+
+        <div className="flex   gap-3 	border-b-4  w-full 	">
+          <div className="flex gap-1  	">
+            <img src={world} alt="" />
+            <NavLink className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-b-black">
+              Все
+            </NavLink>
+          </div>
+          <div className="flex gap-1">
+            <img src={sunIcon} alt="" />
+            <NavLink className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
+              {" "}
+              Мои публикации
+            </NavLink>{" "}
+          </div>
         </div>
 
+        <div className="flex justify-between w-full ">
+          <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
+            Все публикации
+          </div>
+       <Input placeholder={'Поиск по публикациям'}/>
+       
+    
+        </div>
+     
         <div className="grid grid-cols-4 gap-[24px]">
           <PublicCard link={"detailed/6"} />
           <PublicCard link={"detailed/6"} />
@@ -72,3 +104,9 @@ function Post() {
 }
 
 export default Post;
+
+const DropDownContainer = styled("div")``;
+const DropDownHeader = styled("div")``;
+const DropDownListContainer = styled("div")``;
+const DropDownList = styled("ul")``;
+const ListItem = styled("li")``;

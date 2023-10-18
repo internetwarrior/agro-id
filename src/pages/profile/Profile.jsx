@@ -1,5 +1,5 @@
 import React from "react";
-import Profile_bg from "../../static/draft/profile_bg.jpg";
+import Profile_bg from "../../static/images/CardUsersvg.svg";
 import Photo_emty from "../../static/svg/Photo_empty.svg";
 import Upload_SVG from "../../static/svg/upload.svg";
 import Upload_SVG2 from "../../static/svg/IconUpload2.svg";
