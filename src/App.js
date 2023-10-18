@@ -62,7 +62,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 1
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
         to="/"
@@ -76,7 +76,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 2
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
       >
@@ -89,7 +89,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 3
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
       >
@@ -101,7 +101,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 4
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
         to="/users"
@@ -114,7 +114,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 5
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
         to="/post"
@@ -127,7 +127,7 @@ export const HeaderNavigator = () => {
         }}
         className={
           activePage === 6
-            ? "p-4 border-b-2 border-solid border-gray-300"
+            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
             : "p-4"
         }
         to="/programs"

@@ -10,7 +10,7 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
-    <header className="w-full h-[60px] bg-[#2B361E] flex justify-center text-white">
+    <header className="w-full h-[60px] bg-[#2B361E] flex justify-center text-white pb-[5px]">
       <div className="flex items-center justify-between h-full w-full max-w-[1600px] px-[20px] md:px-[40px] 2xl:px-[0px]">
         <Link to="/" className=" text-[32px] font-logo text-">
           Agro ID
