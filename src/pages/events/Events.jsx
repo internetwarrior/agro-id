@@ -1,10 +1,10 @@
 import React from "react";
 
 import Title from "../a_components/Title";
-import titleSVG from "../../static/svg/IconLineAndBarChart.svg";
+import titleSVG from "../../static/svg/Vector (4).svg";
+
 import PostContent from "../a_components/PostContent";
 import Post_bg from "../../static/images/event_bg.png";
-
 import GoBackSVG from "../../static/svg/IconBackward.svg";
 import GoForwSVG from "../../static/svg/IconForward.svg";
 
@@ -23,6 +23,7 @@ function Events() {
       <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
         <Title img={titleSVG} title="Мероприятия" />
         <PostContent
+          className={scss.secondBanner}
           title={"Мероприятия"}
           content="Организуйте встречу, конференцию, выставку, вебинар, опрос или любое другое событие в офлайн или онлайн формате. Охватите целевую аудиторию и удобно проинформируйте ее о своем мероприятии"
           buttonTitle={"Создать Мероприятие"}

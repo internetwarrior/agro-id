@@ -10,6 +10,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
 import { InputSearch } from "../a_components/Input";
+import scss from './Post.module.scss'
 
 
 function Post() {
@@ -20,8 +21,8 @@ function Post() {
       <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
         <Outlet />
         <Title img={titleSVG} title="Публикации" />
-
         <PostContent
+        className={scss.secondBanner}  
           title={"Публикации"}
           content="Вы можете разместить свою статью, публикацию или исследование по одной из тематик отрасли."
           buttonTitle={"Создать публикацию"}

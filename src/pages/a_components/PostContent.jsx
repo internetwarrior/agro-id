@@ -1,10 +1,13 @@
 import React from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import scss from '../d_main/components/Main.module.scss'
 
 function PostContent(props) {
   return (
-    <div className="p-[44px] overflow-hidden relative w-full flex flex-col gap-[28px] shadow-xl rounded-[8px]">
+    
+ 
+   <div className=   "p-[44px] overflow-hidden relative w-full flex flex-col gap-[28px] shadow-xl rounded-[8px]">
       <div className=" font-bold text-[24px] text-[#2B361E]">{props.title}</div>
       <div className=" text-[20px]  text-[#2B361E] opacity-80 max-w-[900px]">
         {props.content}

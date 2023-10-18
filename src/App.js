@@ -30,6 +30,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/organizations" element={<Organizations />} />
 
+
         <Route path="/profile" element={<Profile />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
@@ -40,11 +41,13 @@ function App() {
         <Route path="/events" element={<Events />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
+      
 
         <Route path="/programs" element={<Programs />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
       </Routes>
+
     </>
   );
 }
