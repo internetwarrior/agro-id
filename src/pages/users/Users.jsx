@@ -38,34 +38,35 @@ function Users() {
     <>
       <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
         <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[32px] ">
-
           <div className="flex items-center	 w-full ">
-              <Title img={TitleSVG} title={"Участники"} />
-          <div className="w-full">
-          <InputSearch placeholder={"ФИО, отрасль, должность, компания"} />
-
+            <Title img={TitleSVG} title={"Участники"} />
+            <div className="w-full">
+              <InputSearch placeholder={"ФИО, отрасль, должность, компания"} />
+            </div>
           </div>
-          </div>
 
-          <div className="flex gap-3 items-start">
-            <SelectApp
-              onChange={handleChange}
-              title={first}
-              dataObject={dataObject}
-              id={1}
-            />
-            <SelectApp
-              onChange={secondhandleChange}
-              title={second}
-              dataObject={dataObject2}
-              id={2}
-            />
-            <SelectApp
-              onChange={thirdhandleChange}
-              title={third}
-              dataObject={dataObject3}
-              id={3}
-            />
+          <div className="flex w-full justify-between">
+            <div className="flex gap-3 items-start">
+              <SelectApp
+                onChange={handleChange}
+                title={first}
+                dataObject={dataObject}
+                id={1}
+              />
+              <SelectApp
+                onChange={secondhandleChange}
+                title={second}
+                dataObject={dataObject2}
+                id={2}
+              />
+              <SelectApp
+                onChange={thirdhandleChange}
+                title={third}
+                dataObject={dataObject3}
+                id={3}
+              />
+            </div>
+            <div>hello</div>
           </div>
 
           <div className="grid grid-cols-6 gap-[24px]">

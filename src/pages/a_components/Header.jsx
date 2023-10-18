@@ -4,6 +4,7 @@ import SearchIcon from "../../static/svg/search.svg";
 import Notification from "../../static/svg/notification.svg";
 import { toggle } from "../../features/popus/popupSlice";
 import { useDispatch } from "react-redux";
+import { HeaderNavigator } from "../../App";
 
 function Header() {
   const dispatch = useDispatch();
@@ -15,39 +16,7 @@ function Header() {
           Agro ID
         </Link>
 
-        <nav className="  gap-4 text-secondary hidden xl:flex">
-          <NavLink
-            className="p-4 active:border-b-2 border-solid border-gray-300"
-            to="/"
-          >
-            Главная
-          </NavLink>
-          <NavLink className="p-4 active:border-b-2 border-solid border-gray-300">
-            Мероприятие
-          </NavLink>
-          <NavLink className="p-4 active:border-b-2 border-solid border-gray-300">
-            Организации
-          </NavLink>
-          <Link
-            className="p-4 active:border-b-2 border-solid border-gray-300"
-            to="/users"
-          >
-            Участники
-          </Link>
-          <Link
-            className="p-4 active:border-b-2 border-solid border-gray-300" 
-            to="/post"
-          >
-            Публикации
-          </Link>
-          <Link
-            className="p-4 active:border-b-2 border-solid border-gray-300"
-            to="/programs"
-          >
-            Навигатор
-          </Link>
-        </nav>
-
+        <HeaderNavigator />
         <div className="flex gap-6 text-secondary">
           <div className="flex gap-4">
             <button>
