@@ -4,6 +4,7 @@ import scss from "../d_main/components/Main.module.scss";
 
 function SignBanner() {
   return (
+    
     <div className=" bg-[#FAF8F6] p-[44px]  min-h-[100vh]  rounded-[8px] shadow-lg hidden xl:flex">
       
       <div className="flex  flex-col gap-10 ">
@@ -18,7 +19,7 @@ function SignBanner() {
       
       </div>
       <div>
-      <div className="flex flex-col  w-[60%] justify-center gap-4 text-center">
+      <div className="flex flex-col p-10  justify-center gap-4 text-center">
         <p className="text-[32px] text-[#334746] font-semibold">Создавайте мероприятия</p>
         <span className=" text-[#334746] ">
           Организуйте онлайн или офлайн мероприятие, проведите конференцию или

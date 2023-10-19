@@ -25,15 +25,10 @@ function Main() {
     <main className=" w-full  min-h-[100vh] flex justify-center bg-[#FAF8F6]">
       <div className="  w-full  mb-[200px] flex items-center flex-col ">
         <Outlet />
-        <div className=" w-full flex  gap-6 mt-[28px]  px-[20px]  md:px-[40px]  max-w-[1600px] ">
-          <div>
+        <div className=" w-full grid grid-cols-1 2xl:grid-cols-2 2xl:px-0  gap-6 mt-[28px]  px-[20px]  md:px-[40px]  max-w-[1600px] ">
           <Banner />
 
-          </div>
-
-<SecondBanner  />
-
-
+          <SecondBanner />
         </div>
         <div className=" w-full flex gap-[24px]  my-[24px] overflow-x-scroll px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px]">
           <Card />

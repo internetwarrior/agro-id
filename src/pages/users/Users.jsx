@@ -4,13 +4,13 @@ import Title from "../a_components/Title";
 import TitleSVG from "../../static/svg/userIcon.svg";
 import SelectApp from "../d_main/components/Select";
 import { InputSearch } from "../a_components/Input";
+import img from "../../static/selectIcons/IconBook.png";
 
 function Users() {
   const [first, setSelected] = useState("key1");
   const [second, secondsetSelected] = useState("key1");
   const [third, thirdsetSelected] = useState("key1");
   const [five, fiveHandle] = useState("key1");
-
 
   const dataObject = {
     key1: "Интересы",
@@ -25,7 +25,10 @@ function Users() {
   const dataObject3 = {
     key1: "Должность",
     key2: "String 2",
-    key3: "String 3",
+    key3: {
+      img: img,
+      title: "string",
+    },
   };
   const dataObject4 = {
     key1: "Должность",
@@ -70,27 +73,31 @@ function Users() {
                 id={2}
               />
               <SelectApp
-              className='wfull'
+                className="wfull"
                 onChange={thirdhandleChange}
                 title={third}
                 dataObject={dataObject3}
                 id={3}
               />
             </div>
-            <div>
-         <select  className="border-l-0 border-r-0 focus:outline-none" name="" id="">
-          <option value="">По актуальности</option>
-          <option value="">По актуальности</option>
+            <div className="flex gap-6 items-center">
+              <select
+                className="border-l-0 border-r-0 focus:outline-none"
+                name=""
+                id=""
+              >
+                <option value="">По актуальности</option>
+                <option value="">По актуальности</option>
+              </select>
+              <span>hello</span>   
 
-         </select>
             </div>
-          </div>
 
-          <div className="grid grid-cols-6 gap-[24px]">
+          </div>
+       <div className="grid grid-cols-6 gap-[24px]">
             {/* <div > */}
             <User />
             <User />
-
             <User />
             <User />
             <User />

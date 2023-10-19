@@ -3,8 +3,8 @@ import Title from "../a_components/Title";
 import TitleSVG from "../../static/svg/bagsvg.svg";
 import Organization from "./components/Organization";
 import { Outlet } from "react-router-dom";
-import { Input } from "@mui/material";
 import { InputSearch } from "../a_components/Input";
+import AccordionPart from "./Accordion";
 
 function Organizations() {
   return (
@@ -20,7 +20,10 @@ function Organizations() {
           </div>
         
         </div>
+<div className="w-full">
+<AccordionPart/>
 
+</div>
         <div className="grid grid-cols-1  xl:grid-cols-2 gap-[32px] w-full ">
           <Organization />
           <Organization />

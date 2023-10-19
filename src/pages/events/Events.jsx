@@ -12,9 +12,8 @@ import SecondCard from "../a_components/SecondCard";
 import { Link, Outlet } from "react-router-dom";
 import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
-import search from "../../static/svg/search.svg";
-
-import scss from "../post/Post.module.scss";
+import join from "../../static/svg/joinsvg.svg"
+import { InputSearch } from "../a_components/Input";
 
 function Events() {
   return (
@@ -23,7 +22,6 @@ function Events() {
       <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
         <Title img={titleSVG} title="Мероприятия" />
         <PostContent
-          className={scss.secondBanner}
           title={"Мероприятия"}
           content="Организуйте встречу, конференцию, выставку, вебинар, опрос или любое другое событие в офлайн или онлайн формате. Охватите целевую аудиторию и удобно проинформируйте ее о своем мероприятии"
           buttonTitle={"Создать Мероприятие"}
@@ -38,6 +36,12 @@ function Events() {
             </Link>
           </div>
           <div className="flex gap-1">
+            <img src={join} alt="" />
+            <Link className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
+            Я участвую
+            </Link>
+          </div>
+          <div className="flex gap-1">
             <img src={sunIcon} alt="" />
             <Link className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
               Мои публикации
@@ -49,16 +53,7 @@ function Events() {
           <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
             Все Мероприятия
           </div>
-          <div className={scss.inputContainer}>
-            <img src={search} alt="" />
-            <input
-              className={scss.input}
-              type="text"
-              placeholder="Поиск по публикациям"
-              name=""
-              id=""
-            />
-          </div>
+          <InputSearch placeholder={'Поиск по мероприятиям'}/>
         </div>
 
         <div className="grid grid-cols-4 gap-[24px]">
