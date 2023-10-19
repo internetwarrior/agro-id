@@ -1,12 +1,11 @@
 import React from "react";
-import Dummy_bg from "../../../static/draft/org_bg.png";
 import DownloadSVG from "../../../static/svg/download2.svg";
 import Star from "../../../static/svg/star2.svg";
 
 function Organization() {
   return (
-    <div className=" w-full p-[24px] relative rounded-[8px]  overflow-hidden shadow-xl flex flex-col gap-[24px]">
-      <div className="flex  gap-[30px]">
+    <div className=" bg-green-300	 w-full p-[24px] relative rounded-[8px]  overflow-hidden shadow-xl flex flex-col gap-[24px]">
+      <div className="flex  gap-[30px] ">
         <div className="text-[24px] font-semibold  flex-shrink text-[#2B361E] flex items-center gap-[10px]">
           <div className=" h-[10px] bg-[#22C38E] rounded-full"></div>
           Сельхозартель Колхоз «Радуга»

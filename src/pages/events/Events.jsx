@@ -1,10 +1,10 @@
 import React from "react";
 
 import Title from "../a_components/Title";
-import titleSVG from "../../static/svg/IconLineAndBarChart.svg";
+import titleSVG from "../../static/svg/Vector (4).svg";
+
 import PostContent from "../a_components/PostContent";
 import Post_bg from "../../static/images/event_bg.png";
-
 import GoBackSVG from "../../static/svg/IconBackward.svg";
 import GoForwSVG from "../../static/svg/IconForward.svg";
 
@@ -12,9 +12,8 @@ import SecondCard from "../a_components/SecondCard";
 import { Link, Outlet } from "react-router-dom";
 import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
-import search from "../../static/svg/search.svg";
-
-import scss from "../post/Post.module.scss";
+import join from "../../static/svg/joinsvg.svg"
+import { InputSearch } from "../a_components/Input";
 
 function Events() {
   return (
@@ -37,6 +36,12 @@ function Events() {
             </Link>
           </div>
           <div className="flex gap-1">
+            <img src={join} alt="" />
+            <Link className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
+            Я участвую
+            </Link>
+          </div>
+          <div className="flex gap-1">
             <img src={sunIcon} alt="" />
             <Link className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
               Мои публикации
@@ -48,16 +53,7 @@ function Events() {
           <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
             Все Мероприятия
           </div>
-          <div className={scss.inputContainer}>
-            <img src={search} alt="" />
-            <input
-              className={scss.input}
-              type="text"
-              placeholder="Поиск по публикациям"
-              name=""
-              id=""
-            />
-          </div>
+          <InputSearch placeholder={'Поиск по мероприятиям'}/>
         </div>
 
         <div className="grid grid-cols-4 gap-[24px]">

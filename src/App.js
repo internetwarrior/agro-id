@@ -14,6 +14,8 @@ import Programs from "./pages/programs/Programs";
 import CreateEdit from "./pages/b_windows/CreateEdit";
 import Detailed from "./pages/post/Detailed";
 import { useState } from "react";
+import AccordionPart from "./pages/organizations/Accordion";
+import { DataOrganization } from "./pages/organizations/components/DataOrganization";
 
 function App() {
   return (
@@ -41,9 +43,14 @@ function App() {
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
 
+        <Route path="accordion" element={<AccordionPart />} />
+
+
         <Route path="/programs" element={<Programs />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
+        <Route path="/DataOrganization" element={<DataOrganization />} />
+
       </Routes>
     </>
   );

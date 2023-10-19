@@ -15,7 +15,6 @@ import img3 from "../../static/svg/crown.svg";
 import img4 from "../../static/svg/leave.svg";
 import img5 from "../../static/svg/IconBook.svg";
 import img6 from "../../static/svg/flag.svg";
-import scss from "./components/Main.module.scss";
 import Chart_1 from "./charts/Chart";
 import Horizontal_chart from "./charts/Horizontal";
 import PieChart1 from "./charts/PieChart";
@@ -23,13 +22,13 @@ import { Outlet } from "react-router-dom";
 
 function Main() {
   return (
-    <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
+    <main className=" w-full  min-h-[100vh] flex justify-center bg-[#FAF8F6]">
       <div className="  w-full  mb-[200px] flex items-center flex-col ">
         <Outlet />
-        <div className=" grid grid-cols-1   gap-6 mt-[28px] px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px] w-full">
+        <div className=" w-full grid grid-cols-1 2xl:grid-cols-2 2xl:px-0  gap-6 mt-[28px]  px-[20px]  md:px-[40px]  max-w-[1600px] ">
           <Banner />
 
-          <SecondBanner className={scss.secondBanner} />
+          <SecondBanner />
         </div>
         <div className=" w-full flex gap-[24px]  my-[24px] overflow-x-scroll px-[20px] md:px-[40px] 2xl:px-[0px]  max-w-[1600px]">
           <Card />
