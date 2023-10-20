@@ -106,6 +106,7 @@ function Post() {
                 title={first}
                 dataObject={dataObject}
                 id={1}
+                
               />
               <SelectApp
                 onChange={secondhandleChange}
