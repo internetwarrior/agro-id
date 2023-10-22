@@ -12,12 +12,8 @@ function CreateEdit(props) {
   const location = useLocation();
 
   const [title, setTitle] = useState("Название страницы");
-  const adawd = {
-    "profile-job": "Работа",
-  };
-  const lastLocation = location.pathname
-    .split("/")
-    .filter((path) => path !== reason && path !== "create-edit")[1];
+
+  const lastLocation = location.pathname.split("/").filter((path) => path !== reason && path !== "create-edit")[1];
 
   return (
     <>
@@ -26,29 +22,18 @@ function CreateEdit(props) {
           <div className=" fixed w-full h-full bg-black bg-opacity-30 z-50 top-0 left-0 flex justify-center items-center">
             <form className=" py-[34px] px-[44px] min-w-[1000px] min-h-[400px] bg-[#FAF8F6] rounded-[8px] flex flex-col gap-[24px]">
               <div className=" flex justify-between items-start grid-full">
-                <h4 className=" text-[32px] text-[#334746] font-semibold">
-                  {title + ":" + reason}
-                </h4>
-                <Link
-                  to={lastLocation === undefined ? "/" : "/" + lastLocation}
-                >
+                <h4 className=" text-[32px] text-[#334746] font-semibold">{title + ":" + reason}</h4>
+                <Link to={lastLocation === undefined ? "/" : "/" + lastLocation}>
                   <img src={EditSVG} alt="" />
                 </Link>
               </div>
-              {reason == "profile-personal" && lastLocation == "profile" && (
-                <MainInformation />
-              )}
+              {reason == "profile-personal" && lastLocation == "profile" && <MainInformation />}
 
               <Job />
 
-              {reason == "profile-resume" && lastLocation == "profile" && (
-                <Resume />
-              )}
-              {reason == "profile-education" && lastLocation == "profile" && (
-                <Education />
-              )}
-              {reason == "profile-accomplishments" &&
-                lastLocation == "profile" && <Accomplishments />}
+              {reason == "profile-resume" && lastLocation == "profile" && <Resume />}
+              {reason == "profile-education" && lastLocation == "profile" && <Education />}
+              {reason == "profile-accomplishments" && lastLocation == "profile" && <Accomplishments />}
               {reason == "profile-job" && lastLocation == "profile" && <Job />}
               <div className="grid grid-cols-2 gap-[24px]">
                 {/* <div>dd</div>
@@ -58,12 +43,8 @@ function CreateEdit(props) {
                   htmlFor="hello"
                   className=" flex flex-col items-center outline-dashed outline-[2px] px-[60px] py-[19.5px] outline-[#00426947] rounded-[4px]"
                 >
-                  <div className=" mb-[4px] text-[#00203399] text-[14px]">
-                    Перетащите файлы или нажмите кнопку
-                  </div>
-                  <div className=" text-[#0020334D] text-[12px]">
-                    Поддерживаемые форматы: JPG, PNG ДО 10 МБ
-                  </div>
+                  <div className=" mb-[4px] text-[#00203399] text-[14px]">Перетащите файлы или нажмите кнопку</div>
+                  <div className=" text-[#0020334D] text-[12px]">Поддерживаемые форматы: JPG, PNG ДО 10 МБ</div>
                   <button className=" mt-[12px] flex items-center gap-[12px] pr-[16px] pl-[12px] text-[#00395CCC] bg-[#00426912] rounded-[4px] py-[4px]">
                     <img src={Attatch} alt="" />
                     Загрузить файл
@@ -79,40 +60,21 @@ function CreateEdit(props) {
                   id=""
                 />
 
-                <select
-                  className="p-[13px] outline outline-[1px] outline-[#00426947] rounded-[8px]"
-                  value="0"
-                >
+                <select className="p-[13px] outline outline-[1px] outline-[#00426947] rounded-[8px]" value="0">
                   <option className="p-[13px] outline outline-[1px]" value="0">
                     Выберите категорию
                   </option>
                 </select>
                 <div>
                   <div className="flex items-center gap-[12px]">
-                    <input
-                      className=" w-[20px] h-[20px] "
-                      type="radio"
-                      name="company"
-                      id="radio1"
-                    />
-                    <label
-                      className="text-[18px] text-[#002033]"
-                      htmlFor="radio1"
-                    >
+                    <input className=" w-[20px] h-[20px] " type="radio" name="company" id="radio1" />
+                    <label className="text-[18px] text-[#002033]" htmlFor="radio1">
                       От моего имени
                     </label>
                   </div>
                   <div className="flex items-center gap-[12px]">
-                    <input
-                      className=" w-[20px] h-[20px] "
-                      type="radio"
-                      name="company"
-                      id="radio2"
-                    />
-                    <label
-                      className="text-[18px] text-[#002033]"
-                      htmlFor="radio2"
-                    >
+                    <input className=" w-[20px] h-[20px] " type="radio" name="company" id="radio2" />
+                    <label className="text-[18px] text-[#002033]" htmlFor="radio2">
                       От имени компании
                     </label>
                   </div>
@@ -133,11 +95,7 @@ function CreateEdit(props) {
                 >
                   Отмена
                 </Link>
-                <input
-                  className="flex justify-center py-[12px] bg-[#AE8E49] text-white rounded-[4px]"
-                  value="Сохранить"
-                  type="submit"
-                />
+                <input className="flex justify-center py-[12px] bg-[#AE8E49] text-white rounded-[4px]" value="Сохранить" type="submit" />
               </div>
             </form>
           </div>
@@ -150,36 +108,11 @@ function CreateEdit(props) {
 const Accomplishments = () => {
   return (
     <div className="grid grid-cols-2 gap-[24px]">
-      <Input
-        label={"Учебное заведение"}
-        name={"firstName"}
-        placeholder={"Введите Фамилию"}
-        type={"text"}
-      />
-      <Input
-        label={"Вид обучения"}
-        name={"firstName"}
-        placeholder={"Введите имя"}
-        type={"text"}
-      />
-      <Input
-        label={"Название обучения"}
-        name={"firstName"}
-        placeholder={"Введите отчество"}
-        type={"text"}
-      />
-      <Input
-        label={"Период обучения"}
-        name={"firstName"}
-        placeholder={"Введите Дата рождения"}
-        type={"text"}
-      />
-      <Input
-        label={"Документы"}
-        name={"firstName"}
-        placeholder={"Введите Дата рождения"}
-        type={"text"}
-      />
+      <Input label={"Учебное заведение"} name={"firstName"} placeholder={"Введите Фамилию"} type={"text"} />
+      <Input label={"Вид обучения"} name={"firstName"} placeholder={"Введите имя"} type={"text"} />
+      <Input label={"Название обучения"} name={"firstName"} placeholder={"Введите отчество"} type={"text"} />
+      <Input label={"Период обучения"} name={"firstName"} placeholder={"Введите Дата рождения"} type={"text"} />
+      <Input label={"Документы"} name={"firstName"} placeholder={"Введите Дата рождения"} type={"text"} />
       <div>+ Добавить место учебы</div>
     </div>
   );
@@ -226,30 +159,10 @@ const Job = () => {
 const Resume = () => {
   return (
     <div className="grid grid-cols-2 gap-[24px]">
-      <Input
-        label={"Желаемая должность"}
-        name={"firstName"}
-        placeholder={"Введите Фамилию"}
-        type={"text"}
-      />
-      <Input
-        label={"Квалификация"}
-        name={"firstName"}
-        placeholder={"Введите имя"}
-        type={"text"}
-      />
-      <Input
-        label={"Ожидаемая заработная плата (руб.)"}
-        name={"firstName"}
-        placeholder={"Введите отчество"}
-        type={"text"}
-      />
-      <Input
-        label={"Профессиональные навыки (255/255 символов) "}
-        name={"firstName"}
-        placeholder={"Введите Дата рождения"}
-        type={"text"}
-      />
+      <Input label={"Желаемая должность"} name={"firstName"} placeholder={"Введите Фамилию"} type={"text"} />
+      <Input label={"Квалификация"} name={"firstName"} placeholder={"Введите имя"} type={"text"} />
+      <Input label={"Ожидаемая заработная плата (руб.)"} name={"firstName"} placeholder={"Введите отчество"} type={"text"} />
+      <Input label={"Профессиональные навыки (255/255 символов) "} name={"firstName"} placeholder={"Введите Дата рождения"} type={"text"} />
       <div className=" grid-full">
         <div className=" text-[#00203399]">Интересы</div>
         <div>
@@ -264,30 +177,10 @@ const Resume = () => {
 const Education = () => {
   return (
     <div className="grid grid-cols-2 gap-[24px]">
-      <Input
-        label={"Желаемая должность"}
-        name={"firstName"}
-        placeholder={"Введите Фамилию"}
-        type={"text"}
-      />
-      <Input
-        label={"Квалификация"}
-        name={"firstName"}
-        placeholder={"Введите имя"}
-        type={"text"}
-      />
-      <Input
-        label={"Ожидаемая заработная плата (руб.)"}
-        name={"firstName"}
-        placeholder={"Введите отчество"}
-        type={"text"}
-      />
-      <Input
-        label={"Профессиональные навыки (255/255 символов) "}
-        name={"firstName"}
-        placeholder={"Введите Дата рождения"}
-        type={"text"}
-      />
+      <Input label={"Желаемая должность"} name={"firstName"} placeholder={"Введите Фамилию"} type={"text"} />
+      <Input label={"Квалификация"} name={"firstName"} placeholder={"Введите имя"} type={"text"} />
+      <Input label={"Ожидаемая заработная плата (руб.)"} name={"firstName"} placeholder={"Введите отчество"} type={"text"} />
+      <Input label={"Профессиональные навыки (255/255 символов) "} name={"firstName"} placeholder={"Введите Дата рождения"} type={"text"} />
       <div className=" grid-full">
         <div className=" text-[#00203399]">Интересы</div>
         <div>
@@ -303,66 +196,16 @@ const MainInformation = () => {
   return (
     <>
       <div className="grid grid-cols-2 gap-[24px]">
-        <Input
-          label={"Фамилия"}
-          name={"firstName"}
-          placeholder={"Введите Фамилию"}
-          type={"text"}
-        />
-        <Input
-          label={"Имя"}
-          name={"firstName"}
-          placeholder={"Введите имя"}
-          type={"text"}
-        />
-        <Input
-          label={"Отчество"}
-          name={"firstName"}
-          placeholder={"Введите отчество"}
-          type={"text"}
-        />
-        <Input
-          label={"Дата рождения"}
-          name={"firstName"}
-          placeholder={"Введите Дата рождения"}
-          type={"text"}
-        />
-        <Input
-          label={"Телефон"}
-          name={"firstName"}
-          placeholder={"Введите телефон"}
-          type={"text"}
-        />
-        <Input
-          label={"Эл. почта"}
-          name={"firstName"}
-          placeholder={"Введите эл.почта"}
-          type={"email"}
-        />
-        <Input
-          label={"Страна "}
-          name={"firstName"}
-          placeholder={"Введите страну"}
-          type={"text"}
-        />
-        <Input
-          label={"Город"}
-          name={"firstName"}
-          placeholder={"Введите Город"}
-          type={"text"}
-        />
-        <Input
-          label={"Отрасль деятельности"}
-          name={"firstName"}
-          placeholder={"Введите Отрасль деятельности"}
-          type={"text"}
-        />
-        <Input
-          label={"Профессиональная область"}
-          name={"firstName"}
-          placeholder={"Введите Профессиональная область"}
-          type={"text"}
-        />
+        <Input label={"Фамилия"} name={"firstName"} placeholder={"Введите Фамилию"} type={"text"} />
+        <Input label={"Имя"} name={"firstName"} placeholder={"Введите имя"} type={"text"} />
+        <Input label={"Отчество"} name={"firstName"} placeholder={"Введите отчество"} type={"text"} />
+        <Input label={"Дата рождения"} name={"firstName"} placeholder={"Введите Дата рождения"} type={"text"} />
+        <Input label={"Телефон"} name={"firstName"} placeholder={"Введите телефон"} type={"text"} />
+        <Input label={"Эл. почта"} name={"firstName"} placeholder={"Введите эл.почта"} type={"email"} />
+        <Input label={"Страна "} name={"firstName"} placeholder={"Введите страну"} type={"text"} />
+        <Input label={"Город"} name={"firstName"} placeholder={"Введите Город"} type={"text"} />
+        <Input label={"Отрасль деятельности"} name={"firstName"} placeholder={"Введите Отрасль деятельности"} type={"text"} />
+        <Input label={"Профессиональная область"} name={"firstName"} placeholder={"Введите Профессиональная область"} type={"text"} />
       </div>
       <div className=" w-full flex justify-between">
         <div className=" text-[#00203399]">Компании</div>

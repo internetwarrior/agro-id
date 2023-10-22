@@ -12,7 +12,7 @@ import SecondCard from "../a_components/SecondCard";
 import { Link, Outlet } from "react-router-dom";
 import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
-import join from "../../static/svg/joinsvg.svg"
+import join from "../../static/svg/joinsvg.svg";
 import { InputSearch } from "../a_components/Input";
 
 function Events() {
@@ -38,7 +38,7 @@ function Events() {
           <div className="flex gap-1">
             <img src={join} alt="" />
             <Link className="   p-3 border-b-3 border-solid border-gray-300 text-[#00203399] active:text-black active:border-black">
-            Я участвую
+              Я участвую
             </Link>
           </div>
           <div className="flex gap-1">
@@ -49,12 +49,7 @@ function Events() {
           </div>
         </div>
 
-        <div className="flex justify-between w-full ">
-          <div className=" w-full text-[#2B361E] text-[24px]  font-bold">
-            Все Мероприятия
-          </div>
-          <InputSearch placeholder={'Поиск по мероприятиям'}/>
-        </div>
+        <Title text={"Все Мероприятия"} search={true} textSearch={"Поиск по мероприятиям"} />
 
         <div className="grid grid-cols-4 gap-[24px]">
           <SecondCard />
@@ -75,27 +70,13 @@ function Events() {
             <img src={GoBackSVG} alt="" />
             Назад
           </button>
-          <div className="w-[48px] h-[48px] bg-[#00426912] text-[#4C4C40CC] flex justify-center items-center">
-            1
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            2
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            3
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            4
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            5
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            ...
-          </div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">
-            50
-          </div>
+          <div className="w-[48px] h-[48px] bg-[#00426912] text-[#4C4C40CC] flex justify-center items-center">1</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">2</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">3</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">4</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">5</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">...</div>
+          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">50</div>
 
           <button className=" flex items-center gap-[20px] px-[20px] text-[#4C4C40CC]">
             Вперед

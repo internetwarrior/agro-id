@@ -50,88 +50,67 @@ function Main() {
           <Title img={SVG1} title="Показатели" />
           <div className=" grid grid-cols-1 md:grid-cols-2  gap-[24px] xl:grid-cols-3 mt-[24px]">
             <div className=" p-[24px] shadow-lg rounded-[8px] min-h-[363px] flex flex-col gap-[24px]">
-              <div className=" text-[20px] font-medium">
-                Организаций в системе
-              </div>
+              <div className=" text-[20px] font-medium">Организаций в системе</div>
               <div className="flex">
                 <PieChart1 />
                 <div className="flex flex-col gap-[12px] text-[10px]">
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#2B361E] rounded-full"></div>{" "}
-                    Сельхозпроизводители
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#2B361E] rounded-full"></div> Сельхозпроизводители
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#1C754F] rounded-full"></div>{" "}
-                    Агрохолдинги
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#1C754F] rounded-full"></div> Агрохолдинги
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#EAF0E4] rounded-full"></div>{" "}
-                    Смежные отрасли
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#EAF0E4] rounded-full"></div> Смежные отрасли
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#839159] rounded-full"></div>{" "}
-                    Транспортная логистика
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#839159] rounded-full"></div> Транспортная логистика
                   </span>
                 </div>
               </div>
             </div>
             <div className=" p-[24px] shadow-lg rounded-[8px] min-h-[363px] flex flex-col gap-[24px]">
-              <div className=" text-[20px] font-medium">
-                Пользователей в системе
-              </div>
+              <div className=" text-[20px] font-medium">Пользователей в системе</div>
               <div className=" flex flex-col">
                 <div className="flex pl-[20px]  gap-[12px] text-[10px]">
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#2B361E] rounded-full"></div>{" "}
-                    Агропромышленность
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#2B361E] rounded-full"></div> Агропромышленность
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#839159] rounded-full"></div>{" "}
-                    Логистика
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#839159] rounded-full"></div> Логистика
                   </span>
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#EAF0E4] rounded-full"></div>{" "}
-                    + level компании
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#EAF0E4] rounded-full"></div> + level компании
                   </span>{" "}
                 </div>
                 <Horizontal_chart />
                 <div className=" w-full flex justify-center">
-                  <small className=" text-[12px] text-[#00203399]">
-                    Количество человек, тыс.
-                  </small>
+                  <small className=" text-[12px] text-[#00203399]">Количество человек, тыс.</small>
                 </div>
               </div>
             </div>
             <div className=" p-[24px] shadow-lg rounded-[8px] min-h-[363px] flex flex-col gap-[24px]">
-              <div className=" text-[20px] font-medium">
-                Проведено мероприятий
-              </div>
+              <div className=" text-[20px] font-medium">Проведено мероприятий</div>
               <div className=" flex flex-col">
                 <div className="flex pl-[20px]  gap-[12px] text-[10px]">
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#F38B00] rounded-full"></div>{" "}
-                    Семинары
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#F38B00] rounded-full"></div> Семинары
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#F2C94C] rounded-full"></div>{" "}
-                    Конференции
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#F2C94C] rounded-full"></div> Конференции
                   </span>
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#56B9F2] rounded-full"></div>{" "}
-                    Выставки
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#56B9F2] rounded-full"></div> Выставки
                   </span>{" "}
                   <span className="flex items-center gap-[4px]">
-                    <div className="w-[8px] h-[8px] p-[4px] bg-[#22C38E] rounded-full"></div>{" "}
-                    Онлайн-мероприятия
+                    <div className="w-[8px] h-[8px] p-[4px] bg-[#22C38E] rounded-full"></div> Онлайн-мероприятия
                   </span>{" "}
                 </div>
 
                 <Chart_1 />
 
                 <div className=" w-full flex justify-center">
-                  <small className=" text-[12px] text-[#00203399]">
-                    Количество мероприятий
-                  </small>
+                  <small className=" text-[12px] text-[#00203399]">Количество мероприятий</small>
                 </div>
               </div>
             </div>
@@ -164,7 +143,7 @@ function Main() {
         <div className=" max-w-[1600px] w-full">
           <div className="pl-[24px] px-[20px] md:px-[40px] 2xl:px-[0px]">
             <Title img={img3} title="Важные мероприятия" />
-            <div className="flex overflow-x-scroll xl:overflow-visible xl:grid grid-cols-4 gap-6  pt-[24px  ] ">
+            <div className="flex overflow-x-scroll xl:overflow-visible xl:grid grid-cols-4 gap-6  pt-[24px] ">
               <SecondCard />
               <SecondCard />
               <SecondCard />
@@ -189,12 +168,7 @@ function Main() {
 
         <div className=" max-w-[1600px] w-full">
           <div className=" pl-[20px] md:px-[40px] 2xl:px-[0px]">
-            <Title
-              link="post"
-              img={img5}
-              linkInclude={true}
-              title="Публикации"
-            />
+            <Title link="post" img={img5} linkInclude={true} title="Публикации" />
             <div className="flex overflow-x-scroll xl:overflow-visible xl:grid grid-cols-4 gap-6 pt-[24px] ">
               <PublicCard />
               <PublicCard />

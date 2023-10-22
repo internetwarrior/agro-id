@@ -30,11 +30,7 @@ function Profile() {
       <div className=" max-w-[1600px] w-full flex flex-col gap-[32px] mt-[40px] mb-[200px]">
         <div className=" block relative">
           <div className="w-full relative max-h-[270px] h-full overflow-hidden rounded-[8px] ">
-            <img
-              src={Profile_bg}
-              alt=""
-              className="w-full h-full object-cover"
-            />
+            <img src={Profile_bg} alt="" className="w-full h-full object-cover" />
           </div>
           <div className=" p-[32px] w-full mt-[-80px] relative min-h-[170px] left-0 top-0 shadow-xl rounded-[8px] flex bg-[#FAF8F6] gap-[38px]">
             <form
@@ -56,12 +52,7 @@ function Profile() {
                   <img src={Upload_SVG} alt="" />
                 </label>
               </div>
-              <input
-                className=" hidden"
-                type="file"
-                name="profile_pic"
-                id="profile_pic"
-              />
+              <input className=" hidden" type="file" name="profile_pic" id="profile_pic" />
             </form>
             <div className=" flex-grow py-[36px] flex flex-col gap-[20px]">
               <div className="text-[#196343] text-[24px] font-semibold max-w-[300px] leading-[120%]">
@@ -94,9 +85,7 @@ function Profile() {
               </div>
               <div className="flex flex-col gap-[12px]">
                 <Title title={"отрасль и специализация"} />
-                <div className=" font-medium text-[#2B361E] text-[20px]">
-                  Сельское хозяйство, Трейдинг
-                </div>
+                <div className=" font-medium text-[#2B361E] text-[20px]">Сельское хозяйство, Трейдинг</div>
               </div>
             </div>
 
@@ -113,9 +102,7 @@ function Profile() {
                 <img src={RatingSVG} alt="" srcSet="" />
                 Ваш рейтинг <img src={QuestionSVG} alt="" srcSet="" />
               </button>
-              <div className=" text-[#195B3F] text-[20px] font-medium">
-                ID 236788
-              </div>
+              <div className=" text-[#195B3F] text-[20px] font-medium">ID 236788</div>
               <div className=" flex flex-col gap-[10px] w-full">
                 <button className=" outline-[#4C4C40] outline outline-[0.5px] py-[8px] rounded-[4px] gap-[14px] flex items-center justify-center w-full">
                   Загрузить резюме
@@ -167,7 +154,7 @@ function Profile() {
             </div>
             <div className=" flex flex-col gap-[12px] w-[465px] ">
               <Title title={"интересы"} />
-              <div className="block">
+              <div className=" flex flex-wrap gap-[8px]">
                 <Tag title={"Экономика"} />
                 <Tag title={"Предпринимательство"} />
                 <Tag title={"Государственное управление"} />
@@ -202,11 +189,7 @@ function Profile() {
         <div className="grid grid-cols-2 gap-[32px] min-h-[200px]">
           <div className=" w-full h-full"></div>
           <div className="w-full shadow-xl h-full p-[36px] rounded-[8px] flex flex-col gap-[24px]">
-            <Header
-              title={"Сертификаты и дипломы"}
-              accomplishments
-              link={"accomplishments"}
-            />
+            <Header title={"Сертификаты и дипломы"} accomplishments link={"accomplishments"} />
             <div>
               <AddButton />
             </div>

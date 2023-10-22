@@ -16,6 +16,7 @@ import Detailed from "./pages/post/Detailed";
 import { useState } from "react";
 import AccordionPart from "./pages/organizations/Accordion";
 import { DataOrganization } from "./pages/organizations/components/DataOrganization";
+// import Test from "./Test";
 
 function App() {
   return (
@@ -24,14 +25,13 @@ function App() {
 
       <Popup />
       <Routes>
+        {/* <Route path="/" element={<Test />} /> */}
         <Route path="/" element={<Main />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>
-
+        </Route>{" "}
         <Route path="/register" element={<Register />} />
         <Route path="/users" element={<Users />} />
         <Route path="/organizations" element={<Organizations />} />
-
         <Route path="/profile" element={<Profile />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
@@ -42,15 +42,11 @@ function App() {
         <Route path="/events" element={<Events />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
-
         <Route path="accordion" element={<AccordionPart />} />
-
-
         <Route path="/programs" element={<Programs />}>
           <Route path="create-edit/:reason" element={<CreateEdit />} />
         </Route>
         <Route path="/DataOrganization" element={<DataOrganization />} />
-
       </Routes>
     </>
   );
@@ -67,11 +63,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(1);
         }}
-        className={
-          activePage === 1
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 1 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
         to="/"
       >
         Главная
@@ -81,11 +73,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(2);
         }}
-        className={
-          activePage === 2
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 2 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
       >
         Мероприятие
       </Link>
@@ -94,11 +82,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(3);
         }}
-        className={
-          activePage === 3
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 3 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
       >
         Организации
       </Link>
@@ -106,11 +90,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(4);
         }}
-        className={
-          activePage === 4
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 4 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
         to="/users"
       >
         Участники
@@ -119,11 +99,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(5);
         }}
-        className={
-          activePage === 5
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 5 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
         to="/post"
       >
         Публикации
@@ -132,11 +108,7 @@ export const HeaderNavigator = () => {
         onClick={() => {
           setActivePage(6);
         }}
-        className={
-          activePage === 6
-            ? "p-4 border-b-2 border-solid border-[#FBF6EB]"
-            : "p-4"
-        }
+        className={activePage === 6 ? "p-4 border-b-2 border-solid border-[#FBF6EB]" : "p-4"}
         to="/programs"
       >
         Навигатор
