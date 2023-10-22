@@ -5,8 +5,6 @@ import titleSVG from "../../static/svg/Vector (4).svg";
 
 import PostContent from "../a_components/PostContent";
 import Post_bg from "../../static/images/event_bg.png";
-import GoBackSVG from "../../static/svg/IconBackward.svg";
-import GoForwSVG from "../../static/svg/IconForward.svg";
 
 import SecondCard from "../a_components/SecondCard";
 import { Link, Outlet } from "react-router-dom";
@@ -14,20 +12,27 @@ import world from "../../static/svg/IconWorldFilled.svg";
 import sunIcon from "../../static/svg/sunIcon.svg";
 import join from "../../static/svg/joinsvg.svg";
 import { InputSearch } from "../a_components/Input";
+import SliceWrapper from "../a_components/wrappers/SliceWrapper";
+import Pagginator from "../a_components/Pagginator";
 
 function Events() {
   return (
-    <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
+    <>
       <Outlet />
-      <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
+      <SliceWrapper>
         <Title img={titleSVG} title="Мероприятия" />
+      </SliceWrapper>
+
+      <SliceWrapper>
         <PostContent
           title={"Мероприятия"}
           content="Организуйте встречу, конференцию, выставку, вебинар, опрос или любое другое событие в офлайн или онлайн формате. Охватите целевую аудиторию и удобно проинформируйте ее о своем мероприятии"
           buttonTitle={"Создать Мероприятие"}
           img={Post_bg}
         />
+      </SliceWrapper>
 
+      <SliceWrapper>
         <div className="flex   gap-3 	border-b-4  w-full 	">
           <div className="flex gap-1  	">
             <img src={world} alt="" />
@@ -48,9 +53,13 @@ function Events() {
             </Link>
           </div>
         </div>
+      </SliceWrapper>
 
+      <SliceWrapper>
         <Title text={"Все Мероприятия"} search={true} textSearch={"Поиск по мероприятиям"} />
+      </SliceWrapper>
 
+      <SliceWrapper>
         <div className="grid grid-cols-4 gap-[24px]">
           <SecondCard />
           <SecondCard />
@@ -65,26 +74,12 @@ function Events() {
           <SecondCard />
           <SecondCard />
         </div>
-        <nav className=" flex gap-[2px] mt-[20px]">
-          <button className=" flex items-center gap-[20px] px-[20px] text-[#4C4C4042]">
-            <img src={GoBackSVG} alt="" />
-            Назад
-          </button>
-          <div className="w-[48px] h-[48px] bg-[#00426912] text-[#4C4C40CC] flex justify-center items-center">1</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">2</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">3</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">4</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">5</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">...</div>
-          <div className="w-[48px] h-[48px] text-[#4C4C40CC] flex justify-center items-center ">50</div>
+      </SliceWrapper>
 
-          <button className=" flex items-center gap-[20px] px-[20px] text-[#4C4C40CC]">
-            Вперед
-            <img src={GoForwSVG} alt="" />
-          </button>
-        </nav>
-      </div>
-    </main>
+      <SliceWrapper className={" flex justify-center"}>
+        <Pagginator />
+      </SliceWrapper>
+    </>
   );
 }
 

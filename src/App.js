@@ -1,7 +1,6 @@
 // ----Routes and Context connections here
 
 import { Link, Outlet, Route, Routes } from "react-router-dom";
-import Main from "./pages/d_main/Main";
 import Header from "./pages/a_components/Header";
 import Popup from "./pages/b_windows/Popup";
 import Register from "./pages/register/Register";
@@ -12,10 +11,12 @@ import Users from "./pages/users/Users";
 import Organizations from "./pages/organizations/Organizations";
 import Programs from "./pages/programs/Programs";
 import CreateEdit from "./pages/b_windows/CreateEdit";
-import Detailed from "./pages/post/Detailed";
+import PostDetailed from "./pages/post/PostDetailed";
 import { useState } from "react";
 import AccordionPart from "./pages/organizations/Accordion";
 import { DataOrganization } from "./pages/organizations/components/DataOrganization";
+import Main from "./pages/Main";
+import ContentWrapper from "./pages/a_components/wrappers/ContentWrapper";
 // import Test from "./Test";
 
 function App() {
@@ -24,30 +25,33 @@ function App() {
       <Header />
 
       <Popup />
-      <Routes>
-        {/* <Route path="/" element={<Test />} /> */}
-        <Route path="/" element={<Main />}>
-          <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>{" "}
-        <Route path="/register" element={<Register />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/organizations" element={<Organizations />} />
-        <Route path="/profile" element={<Profile />}>
-          <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>
-        <Route path="/post" element={<Post />}>
-          <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>
-        <Route path="post/detailed/:id" element={<Detailed />} />
-        <Route path="/events" element={<Events />}>
-          <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>
-        <Route path="accordion" element={<AccordionPart />} />
-        <Route path="/programs" element={<Programs />}>
-          <Route path="create-edit/:reason" element={<CreateEdit />} />
-        </Route>
-        <Route path="/DataOrganization" element={<DataOrganization />} />
-      </Routes>
+
+      <ContentWrapper>
+        <Routes>
+          {/* <Route path="/" element={<Test />} /> */}
+          <Route path="/" element={<Main />}>
+            <Route path="create-edit/:reason" element={<CreateEdit />} />
+          </Route>{" "}
+          <Route path="/register" element={<Register />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/organizations" element={<Organizations />} />
+          <Route path="/profile" element={<Profile />}>
+            <Route path="create-edit/:reason" element={<CreateEdit />} />
+          </Route>
+          <Route path="/post" element={<Post />}>
+            <Route path="create-edit/:reason" element={<CreateEdit />} />
+          </Route>
+          <Route path="post/detailed/:id" element={<PostDetailed />} />
+          <Route path="/events" element={<Events />}>
+            <Route path="create-edit/:reason" element={<CreateEdit />} />
+          </Route>
+          <Route path="accordion" element={<AccordionPart />} />
+          <Route path="/programs" element={<Programs />}>
+            <Route path="create-edit/:reason" element={<CreateEdit />} />
+          </Route>
+          <Route path="/DataOrganization" element={<DataOrganization />} />
+        </Routes>
+      </ContentWrapper>
     </>
   );
 }
@@ -58,7 +62,7 @@ export const HeaderNavigator = () => {
   const [activePage, setActivePage] = useState(1);
 
   return (
-    <nav className="  gap-4 text-secondary hidden xl:flex">
+    <nav className="  gap-4 text-secondary hidden xl:flex text-[14px]">
       <Link
         onClick={() => {
           setActivePage(1);

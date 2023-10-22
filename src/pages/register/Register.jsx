@@ -57,8 +57,8 @@ function Register() {
   const pageTitles = ["Основные данные", "Дополнительные данные", "Укажите, пожалуйста, сферу Ваших интересов"];
 
   return (
-    <main className=" flex justify-center bg-[#FAF8F6] ">
-      <div className=" my-0 sm:my-[20px] md:my-[40px] max-w-[1600px]  grid grid-cols-1 xl:grid-cols-2 gap-[25px] ">
+    <>
+      <div className=" my-0 sm:my-[20px] md:my-[40px] max-w-[1280px]  grid grid-cols-1 xl:grid-cols-2 gap-[25px] ">
         <Banner />
         <div className=" bg-[#FAF8F6] py-[60px] px-0 mx-0 sm:mx-[20px] xl:mx-0 sm:px-[40px] rounded-[8px] shadow-xl flex items-center justify-center">
           <form className="smooth-animation= flex flex-col items-center gap-[36px] max-w-[470px] w-full">
@@ -111,7 +111,7 @@ function Register() {
           </form>
         </div>
       </div>
-    </main>
+    </>
   );
 }
 

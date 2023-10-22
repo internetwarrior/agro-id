@@ -29,8 +29,8 @@ function Post() {
   ];
 
   return (
-    <main className=" w-full min-h-[100vh] flex justify-center bg-[#FAF8F6]">
-      <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1600px] gap-[28px]">
+    <>
+      <div className="  w-full  mb-[200px] flex items-center flex-col max-w-[1280px] px-[20px] gap-[28px]">
         <Outlet />
         <Title img={titleSVG} title="Публикации" />
         <PostContent
@@ -123,7 +123,7 @@ function Post() {
           </button>
         </nav>
       </div>
-    </main>
+    </>
   );
 }
 

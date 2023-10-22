@@ -9,9 +9,24 @@ import { HeaderNavigator } from "../../App";
 function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const popUp = () => {
+    dispatch(
+      toggle({
+        title: "Привет",
+
+        func: () => {
+          navigate("/register");
+        },
+        buttonTitle: "Продолжить регистрацию",
+        message: "Для полноценного использования всех возможностей  предлагаем заполнить профиль пользовател",
+      }),
+    );
+  };
+
   return (
     <header className="w-full h-[60px] bg-[#2B361E] flex justify-center text-white pb-[5px]">
-      <div className="flex items-center justify-between h-full w-full max-w-[1600px] px-[20px] md:px-[40px] 2xl:px-[0px]">
+      <div className="flex items-center justify-between h-full w-full max-w-[1280px] px-[20px] mx-auto">
         <Link to="/" className=" text-[32px] font-logo text-">
           Agro ID
         </Link>
@@ -26,27 +41,10 @@ function Header() {
               <img src={Notification} alt="" />
             </button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-[14px]">
             <Link to={"/profile"}>Войти</Link>
             <div>|</div>
-            <button
-              onClick={() => {
-                dispatch(
-                  toggle({
-                    title: "Привет",
-
-                    func: () => {
-                      navigate("/register");
-                    },
-                    buttonTitle: "Продолжить регистрацию",
-                    message:
-                      "Для полноценного использования всех возможностей  предлагаем заполнить профиль пользовател",
-                  })
-                );
-              }}
-            >
-              Зарегистрироваться
-            </button>
+            <button onClick={popUp}>Зарегистрироваться</button>
           </div>
         </div>
       </div>
