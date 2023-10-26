@@ -6,7 +6,7 @@ import SVG_3 from "../../../static/svg/IconArrowRight4.svg";
 
 function Post_Navigator() {
   return (
-    <nav className=" flex items-center justify-between mt-[56px] grid-full">
+    <nav className=" flex items-center justify-between grid-full">
       <Link to={"/post"} className="flex gap-[12px] flex-grow">
         {" "}
         <img src={SVG_1} alt="" /> {"К списку публикаций"}

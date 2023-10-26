@@ -1,9 +1,15 @@
 import React from "react";
 import DownloadSVG from "../../../static/svg/download2.svg";
 import Star from "../../../static/svg/star2.svg";
+import { DataOrganization } from "./DataOrganization";
+
 
 function Organization() {
   return (
+    <>
+
+    <div>
+  
     <div className=" bg-green-300	 w-full p-[24px] relative rounded-[8px]  overflow-hidden shadow-xl flex flex-col gap-[24px]">
       <div className="flex  gap-[30px] ">
         <div className="text-[24px] font-semibold  flex-shrink text-[#2B361E] flex items-center gap-[10px]">
@@ -65,6 +71,10 @@ function Organization() {
         /> */}
       </div>
     </div>
+    </div>
+    
+    </>
+
   );
 }
 

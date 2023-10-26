@@ -1,17 +1,14 @@
-.bgk{
- background-image: url('../../../static/images/Card.svg');
- background-size: cover;
- background-repeat: no-repeat; 
- background-position: center; 
-width: 100%;
-
+.contayner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  li {
+    display: flex;
+    gap: 12px;
+  }
 }
-.bg{
- background-image: url('../../../static/images/post_bg.png');
- background-size: cover;
- background-repeat: no-repeat; 
- background-position: center; 
-width: 100%;
-
-}
-
