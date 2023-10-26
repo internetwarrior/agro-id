@@ -28,15 +28,7 @@
 }
 
 .card-gradient {
-  background: var(
-    --effect-gradient-dark,
-    linear-gradient(
-      47deg,
-      rgba(43, 54, 30, 0.2) 12.88%,
-      rgba(239, 201, 76, 0.2) 83.36%
-    ),
-    #2b361e
-  );
+  background: var(--effect-gradient-dark, linear-gradient(47deg, rgba(43, 54, 30, 0.2) 12.88%, rgba(239, 201, 76, 0.2) 83.36%), #2b361e);
 }
 
 /* width */
@@ -67,11 +59,7 @@
 .event-tag {
   border-radius: 4px;
   border: 1px solid var(--control-default-bg-border, rgba(0, 66, 105, 0.28));
-  background: linear-gradient(
-    90deg,
-    rgba(251, 237, 150, 0.5) 0%,
-    rgba(171, 236, 214, 0.5) 100%
-  );
+  background: linear-gradient(90deg, rgba(251, 237, 150, 0.5) 0%, rgba(171, 236, 214, 0.5) 100%);
 }
 
 .grid-full {
@@ -83,14 +71,7 @@
 }
 
 .event-grad {
-  background: var(
-    --effect-gradient-light,
-    linear-gradient(
-      90deg,
-      rgba(251, 237, 150, 0.5) 0%,
-      rgba(171, 236, 214, 0.5) 100%
-    )
-  );
+  background: var(--effect-gradient-light, linear-gradient(90deg, rgba(251, 237, 150, 0.5) 0%, rgba(171, 236, 214, 0.5) 100%));
 }
 
 .input-border {
@@ -131,14 +112,11 @@
 .tag-style {
   border-radius: 4px;
   border: 1px solid var(--control-default-bg-border, rgba(0, 66, 105, 0.28));
-  background: var(
-    --effect-gradient-light,
-    linear-gradient(
-      90deg,
-      rgba(251, 237, 150, 0.5) 0%,
-      rgba(171, 236, 214, 0.5) 100%
-    )
-  );
+  background: var(--effect-gradient-light, linear-gradient(90deg, rgba(251, 237, 150, 0.5) 0%, rgba(171, 236, 214, 0.5) 100%));
+}
+
+.gradient {
+  background: var(--effect-gradient-light, linear-gradient(90deg, rgba(251, 237, 150, 0.5) 0%, rgba(171, 236, 214, 0.5) 100%));
 }
 
 body {
@@ -153,4 +131,39 @@ body {
 
 select {
   border-right: 12px solid transparent;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+button,
+textarea,
+input,
+div,
+label,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

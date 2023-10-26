@@ -1,24 +1,9 @@
 import React from "react";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const data = {
   labels: ["08.2023", "07.2023", "06.2023", "05.2023"],
@@ -85,8 +70,8 @@ export const options = {
 
 const labels = ["08.2023", "07.2023", "06.2023", "05.2023"];
 
-function Horizontal_chart() {
+function Chart_2() {
   return <Bar options={options} data={data} />;
 }
 
-export default Horizontal_chart;
+export default Chart_2;

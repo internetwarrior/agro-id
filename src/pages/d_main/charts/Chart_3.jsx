@@ -1,29 +1,10 @@
 import React from "react";
 import { faker } from "@faker-js/faker";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Filler,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Filler,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend);
 
 export const options = {
   responsive: true,
@@ -113,9 +94,8 @@ export const data = {
     },
   ],
 };
-
-function Chart_1() {
+function Chart_3() {
   return <Line options={options} data={data} />;
 }
 
-export default Chart_1;
+export default Chart_3;

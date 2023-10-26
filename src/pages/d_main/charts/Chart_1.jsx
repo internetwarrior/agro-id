@@ -5,7 +5,7 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 
 import * as am5percent from "@amcharts/amcharts5/percent";
 
-function PieChart1() {
+function Chart_1() {
   useEffect(() => {
     var chartData = {
       2022: [
@@ -30,11 +30,11 @@ function PieChart1() {
 
       var chart = root.container.children.push(
         am5percent.PieChart.new(root, {
-          innerRadius: 120,
+          innerRadius: 90,
           layout: root.verticalLayout,
           maxLabelWidth: 20,
-          radius: 60, //---neeed that
-        })
+          radius: 40,
+        }),
       );
 
       var series = chart.series.push(
@@ -44,9 +44,8 @@ function PieChart1() {
 
           alignLabels: false,
           inside: true,
-        })
+        }),
       );
-      // series.get("colors").set("colors", []);
 
       series.ticks.template.set("visible", false);
       series.slices.template.set("tooltipText", "{category}: {size}");
@@ -68,14 +67,14 @@ function PieChart1() {
         { sector: "Транспортная логистика", size: 30 },
       ]);
 
-      //   let legend = chart.children.push(
-      //     am5.Legend.new(root, {
-      //       layout: root.verticalLayout,
-      //       y: am5.percent(50),
-      //       centerY: am5.percent(50),
-      //     })
-      //   );
-      //   legend.data.setAll(series.dataItems);
+      // let legend = chart.children.push(
+      //   am5.Legend.new(root, {
+      //     layout: root.verticalLayout,
+      //     y: am5.percent(50),
+      //     centerY: am5.percent(50),
+      //   })
+      // );
+      // legend.data.setAll(series.dataItems);
 
       series.appear(1000, 100);
 
@@ -88,7 +87,7 @@ function PieChart1() {
           fill: am5.color(0x000000),
           fontSize: 24,
           fontWeight: "bold",
-        })
+        }),
       );
 
       var currentYear = 2022;
@@ -112,9 +111,7 @@ function PieChart1() {
     });
   }, []);
 
-  return (
-    <div className="w-[243px] h-[243px] z-10 flex-grow" id="chartdiv"></div>
-  );
+  return <div className="w-[210px] h-[210px] z-10 flex-grow" id="chartdiv"></div>;
 }
 
-export default PieChart1;
+export default Chart_1;
