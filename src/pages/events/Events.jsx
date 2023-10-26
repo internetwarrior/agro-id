@@ -3,7 +3,6 @@ import React from "react";
 import Title from "../a_components/Title";
 import titleSVG from "../../static/svg/Vector (4).svg";
 
-import PostContent from "../a_components/PostContent";
 import Post_bg from "../../static/images/event_bg.png";
 
 import SecondCard from "../a_components/SecondCard";
@@ -14,6 +13,8 @@ import join from "../../static/svg/joinsvg.svg";
 import { InputSearch } from "../a_components/Input";
 import SliceWrapper from "../a_components/wrappers/SliceWrapper";
 import Pagginator from "../a_components/Pagginator";
+import GridWrapper from "../a_components/wrappers/GridWrapper";
+import Banner_2 from "../a_components/Banner_2";
 
 function Events() {
   return (
@@ -24,12 +25,7 @@ function Events() {
       </SliceWrapper>
 
       <SliceWrapper>
-        <PostContent
-          title={"Мероприятия"}
-          content="Организуйте встречу, конференцию, выставку, вебинар, опрос или любое другое событие в офлайн или онлайн формате. Охватите целевую аудиторию и удобно проинформируйте ее о своем мероприятии"
-          buttonTitle={"Создать Мероприятие"}
-          img={Post_bg}
-        />
+        <Banner_2 />
       </SliceWrapper>
 
       <SliceWrapper>
@@ -60,7 +56,15 @@ function Events() {
       </SliceWrapper>
 
       <SliceWrapper>
-        <div className="grid grid-cols-4 gap-[24px]">
+        <div
+          className="grid 
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        
+         gap-[24px]"
+        >
           <SecondCard />
           <SecondCard />
           <SecondCard />

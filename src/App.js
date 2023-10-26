@@ -1,6 +1,6 @@
 // ----Routes and Context connections here
 
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Header from "./pages/a_components/Header";
 import Popup from "./pages/b_windows/Popup";
 import Register from "./pages/register/Register";
@@ -12,12 +12,11 @@ import Organizations from "./pages/organizations/Organizations";
 import Programs from "./pages/programs/Programs";
 import CreateEdit from "./pages/b_windows/CreateEdit";
 import PostDetailed from "./pages/post/PostDetailed";
-import { useState } from "react";
+import React, { useState } from "react";
 import AccordionPart from "./pages/organizations/Accordion";
 import { DataOrganization } from "./pages/organizations/components/DataOrganization";
 import Main from "./pages/Main";
 import ContentWrapper from "./pages/a_components/wrappers/ContentWrapper";
-// import Test from "./Test";
 
 function App() {
   return (
@@ -58,7 +57,7 @@ function App() {
 
 export default App;
 
-export const HeaderNavigator = () => {
+export const Navigator = () => {
   const [activePage, setActivePage] = useState(1);
 
   return (

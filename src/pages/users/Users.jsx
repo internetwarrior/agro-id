@@ -41,13 +41,11 @@ function Users() {
   return (
     <>
       <SliceWrapper>
-        <div className="flex items-center	 w-full ">
-          <Title search={true} textSearch={"ФИО, отрасль, должность, компания"} img={TitleSVG} title={"Участники"} />
-        </div>
+        <Title search={true} textSearch={"ФИО, отрасль, должность, компания"} img={TitleSVG} title={"Участники"} />
       </SliceWrapper>
 
       <SliceWrapper>
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between gap-[24px] flex-col md:flex-row">
           <div className="flex gap-3 items-start">
             <Selector
               placeHolder={"Город"}
@@ -81,7 +79,7 @@ function Users() {
       </SliceWrapper>
 
       <SliceWrapper>
-        <div className="grid grid-cols-5 gap-[16px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[16px]">
           <User />
           <User />
           <User />

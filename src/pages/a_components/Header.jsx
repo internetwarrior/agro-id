@@ -4,7 +4,7 @@ import SearchIcon from "../../static/svg/search.svg";
 import Notification from "../../static/svg/notification.svg";
 import { toggle } from "../../features/popus/popupSlice";
 import { useDispatch } from "react-redux";
-import { HeaderNavigator } from "../../App";
+import { Navigator } from "../../App";
 
 function Header() {
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ function Header() {
           Agro ID
         </Link>
 
-        <HeaderNavigator />
+        <Navigator />
         <div className="flex gap-6 text-secondary">
           <div className="flex gap-4">
             <button>
@@ -44,7 +44,8 @@ function Header() {
           <div className="flex gap-2 text-[14px]">
             <Link to={"/profile"}>Войти</Link>
             <div>|</div>
-            <button onClick={popUp}>Зарегистрироваться</button>
+            <Link to={"/register"}>Зарегистрироваться</Link>
+            {/* <button onClick={popUp}>Зарегистрироваться</button> */}
           </div>
         </div>
       </div>

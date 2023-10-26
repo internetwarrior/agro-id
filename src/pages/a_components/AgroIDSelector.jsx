@@ -18,8 +18,6 @@ const Selector = (props) => {
 
   useEffect(() => {
     setOptions(values);
-    // document.addEventListener("click", printMousePos);
-    // console.clear();
   }, []);
 
   useEffect(() => {
@@ -49,12 +47,7 @@ const Selector = (props) => {
   };
 
   return (
-    <div
-      // onBlur={(e) => {
-      //   setToggSelec(false);
-      // }}
-      className="relative"
-    >
+    <div className="relative">
       <button
         onClick={(e) => {
           console.log(e.target.classList);
@@ -100,8 +93,6 @@ const Selector = (props) => {
     </div>
   );
 };
-
-//Toggle
 
 const ToggleSwitch = ({ value, toggle, text, icon }, props) => {
   return (

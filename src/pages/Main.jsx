@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./d_main/components/Banner";
+
 import Button from "./a_components/Button";
 import Card from "./d_main/components/Card";
 import Title from "./a_components/Title";
@@ -9,7 +9,7 @@ import EventCard from "./d_main/components/EventCard";
 import PublicCard from "./post/components/PublicCard";
 import IntegrationCard from "./d_main/components/IntegrationCard";
 import IntegImage from "../static/draft/Integration.png";
-import SecondBanner from "./d_main/components/SecondBanner";
+
 import img2 from "../static/svg/Vector (4).svg";
 import img3 from "../static/svg/crown.svg";
 import img4 from "../static/svg/leave.svg";
@@ -22,8 +22,8 @@ import Chart_2 from "./d_main/charts/Chart_2";
 import Chart_3 from "./d_main/charts/Chart_3";
 import SliceWrapper from "./a_components/wrappers/SliceWrapper";
 import GridWrapper from "./a_components/wrappers/GridWrapper";
-
-const chart_container = "p-[24px] shadow-lg rounded-[8px] min-h-[260px] flex flex-col gap-[24px]";
+import Banner_1 from "./d_main/components/Banner_1";
+import Banner_2 from "./a_components/Banner_2";
 
 function Main() {
   return (
@@ -31,24 +31,10 @@ function Main() {
       <Outlet />
       <SliceWrapper>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2   gap-6">
-          <Banner />
-
-          <SecondBanner />
+          <Banner_1 />
+          <Banner_2 />
           <div className=" w-full flex gap-[24px] overflow-x-scroll grid-full pb-[16px]  ">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {[1, 2, 3, 4, 5, 6, 7, 7, 7, 7].map((val) => console.log(val) || <Card />)}
           </div>
         </div>
       </SliceWrapper>

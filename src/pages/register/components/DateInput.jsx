@@ -10,7 +10,7 @@ function DateInput(props) {
         type="date"
         name="date"
         id="date"
-        className=" p-[10.5px] border-solid border-2 input-border rounded-[4px] flex-grow date-input"
+        className=" p-[8px] outline outline-[1px] outline-[#33474647] rounded-[4px] flex-grow date-input"
       />
     </div>
   );

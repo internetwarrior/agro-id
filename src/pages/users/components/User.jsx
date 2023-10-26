@@ -5,7 +5,7 @@ import FromSVG from "../../../static/svg/from.svg";
 
 function User() {
   return (
-    <div className="  min-w-[380px] xl:min-w-[0] p-[10px] flex flex-col h-[372px] shadow-md rounded-[8px] gap-[8px]">
+    <div className=" w-full xl:min-w-[0] p-[10px] flex flex-col h-[372px] shadow-md rounded-[8px] gap-[8px]">
       <div className=" relative h-full max-h-[190px] rounded-[8px] overflow-hidden">
         <img src={UserIMG} className=" w-full h-full object-cover" alt="" />
       </div>

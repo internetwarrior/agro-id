@@ -12,6 +12,9 @@ function Organizations() {
       <Outlet />
       <SliceWrapper>
         <Title img={TitleSVG} title={"Организации"} search={true} textSearch={"Название, ИНН, ОГРН, год создания"} />
+      </SliceWrapper>
+
+      <SliceWrapper>
         <div className="w-full">
           <AccordionPart />
         </div>

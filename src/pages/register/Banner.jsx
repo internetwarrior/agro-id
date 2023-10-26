@@ -19,7 +19,7 @@ function Banner() {
   };
   const hey = [1, 2, 3];
   return (
-    <div className="p-[44px] shadow-xl rounded-[8px] pb-[68px]">
+    <div className="p-[32px] shadow-xl rounded-[8px] pb-[68px] hidden xl:block">
       <Slider {...settings}>
         {hey.map(() => {
           return (

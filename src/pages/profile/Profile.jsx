@@ -27,12 +27,13 @@ function Profile() {
   };
   return (
     <Wrapper>
-      <div className="grid grid-cols-2 gap-[16px]">
+      <Outlet />
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-[16px]">
         <div className=" block relative grid-full">
           <div className="w-full relative max-h-[270px] h-full overflow-hidden rounded-[8px] ">
             <img src={Profile_bg} alt="" className="w-full h-full object-cover" />
           </div>
-          <div className="  p-[16px] w-full mt-[-80px] relative left-0 top-0 shadow-lg rounded-[8px] flex bg-[#FAF8F6] justify-between">
+          <div className="  p-[16px] w-full mt-[-80px] relative left-0 top-0 shadow-lg rounded-[8px] flex flex-col xl:flex-row bg-[#FAF8F6] justify-between">
             <form
               method="post"
               onChange={() => {
@@ -119,7 +120,7 @@ function Profile() {
 
         <ProfileWrapper className={"grid-full"}>
           <Header title={"Данные для резюме"} link={"resume"} />
-          <div className=" flex gap-[36px]">
+          <div className=" flex gap-[36px] flex-col xl:flex-row">
             <div className=" grid grid-cols-3 justify-between gap-[36px] ">
               <EditSection
                 title={"желаемая должность"}
@@ -152,7 +153,7 @@ function Profile() {
                 }}
               />
             </div>
-            <div className=" flex flex-col gap-[12px] w-[465px] ">
+            <div className=" flex flex-col gap-[12px] max-w-[465px] ">
               <Title title={"интересы"} />
               <div className=" flex flex-wrap gap-[8px]">
                 <Tag title={"Экономика"} />
